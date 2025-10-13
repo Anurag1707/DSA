@@ -1,64 +1,61 @@
-# include <iostream>
+
+#include<iostream>
+#define null 0
 using namespace std;
 
-struct node{
+ struct node
+{
   int data;
-  node *next;
+    node *next;
 };
+node *first,*temp,*ttemp,*p;
 
-node *first , *temp , *ttemp ,*p;
-
-void init(){
-  first=temp=ttemp=NULL;
-
+void init()
+{
+ first=temp=ttemp=null;
 }
-
-void create_first(){
-  first = new node;
-  first -> next = NULL;
-  cout<<"enter data for first node : ";
-  cin>>first->data;
-}
-
-void add_node(){
+void addnode()
+{
   temp=first;
-  while(temp -> next !=NULL){
-    temp=temp -> next;
-  }
-  ttemp=new node;
-  ttemp -> next =NULL;
-  cin>>ttemp-> data;
-  temp -> next =ttemp;
-}
-
-void display(){
-  temp = first;
-  while(temp !=NULL){
-  cout<<temp -> data<<endl;
+ 
+  while(temp->next!=null)
+  {
   temp=temp->next;
   }
+
+  ttemp=new node;
+  ttemp->next=null;
+  cin>>ttemp -> data;
+  temp->next=ttemp;
 }
-
-
-int main(){
-  init();
-  create_first();
-  int flag=1;
-  char ans;
-  while(flag==1){
-    cout<<"do you want to continue : ";
-    cin>>ans;
-    if(ans=='y'){
-      cout<<"enter next data";
-      add_node();
-    }
-    else{
-      flag = 0;
-      display();
-    }
-  }
-  return 0;
+void createfirst()
+{
+ first=new node;
+ cout<<"Enter first node"<<endl;
+ cin>>first -> data ;
+ // first->data=val;
+  first->next=null;
 }
+void disp()
+{
+ temp=first; 
+ while(temp!=null)
+ { 
+   cout<<temp->data<<" ";
+   temp=temp->next;
+ }
+}
+int main()
+{
+	init();
+	createfirst();
+   cout<<"Enter node";
+	addnode();
+  addnode();
+  addnode();
+  addnode();
+	disp();
 
+}
     
 
