@@ -33,14 +33,17 @@ void add_node(){
 
 void add_before(int x,int y){
     temp=first;
+    
     while(temp ->data!=x){
         ttemp=temp;
         temp=temp ->next;
     }
     p=new node;
     p -> data=y;
-    p -> next=ttemp;
-    temp -> next= p;
+    ttemp -> next= p;
+    p -> next= temp;
+
+   
 }
 
 void display(){
@@ -49,33 +52,19 @@ void display(){
   cout<<temp -> data<<endl;
   temp=temp->next;
   }
+ 
 }
 
 
 int main(){
-  init();
-  create_first();
-//   int flag=1;
-//   char ans;
-//   Add_before(30,60);
-//   while(flag==1){
-//     cout<<"do you want to continue : ";
-//     cin>>ans;
-    
-//     if(ans=='y'){
-//       cout<<"enter next data";
-//       add_node();
-//     }
-//     else{
-//       flag = 0;
-//       display();
-//     }
-//   }
+ init();
+create_first();
+
 add_node();
 add_node();
-add_node();
-add_node();
-add_before(50,70);
+
+cout<<"Add before"<<endl;
+add_before(20,70);
 display();
 
   return 0;
