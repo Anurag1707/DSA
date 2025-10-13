@@ -46,7 +46,7 @@ void Add_after(int x,int y){
 void display(){
   temp = first;
   while(temp !=NULL){
-  cout<<temp -> data<<endl;
+  cout<<temp -> data<<" ";
   temp=temp->next;
   }
 }
@@ -55,22 +55,13 @@ void display(){
 int main(){
   init();
   create_first();
-  int flag=1;
-  char ans;
-  Add_after(30,60);
-  while(flag==1){
-    cout<<"do you want to continue : ";
-    cin>>ans;
+  add_node();
+  add_node();
+  add_node();
+  Add_after(30,90);
+  display();
     
-    if(ans=='y'){
-      cout<<"enter next data";
-      add_node();
-    }
-    else{
-      flag = 0;
-      display();
-    }
-  }
+
 
   return 0;
 }
