@@ -54,22 +54,8 @@ void display(){
 int main(){
   init();
   create_first();
-//   int flag=1;
-//   char ans;
-//   Add_before(30,60);
-//   while(flag==1){
-//     cout<<"do you want to continue : ";
-//     cin>>ans;
-    
-//     if(ans=='y'){
-//       cout<<"enter next data";
-//       add_node();
-//     }
-//     else{
-//       flag = 0;
-//       display();
-//     }
-//   }
+
+  
 add_node();
 add_node();
 add_node();
