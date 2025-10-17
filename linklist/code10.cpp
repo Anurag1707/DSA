@@ -72,6 +72,6 @@ int main()
 	disp();
 
 }
-//delete  nth node
+// swap first and lasst
     
 

@@ -6,39 +6,37 @@ struct node
     node *next, *prev;
 };
 node *first,*temp,*ttemp,*p;
-int create_first(int)
+int create_first(int x)
 {
-    first=new node;
-    first->prev=NULL;
-    first->next=NULL;
+  first=new node;
+  first->prev=NULL;
+  first->data=x;
+  first->next=NULL;
 }
-int addnode()
-{   
-    temp=first;
-   
-    while(temp->next!=NULL)
-  {
-  temp=temp->next;
+int addnode(int x)
+{
+  temp=first;
+  while(temp->next!=NULL){
+    ttemp=temp;
+    temp=temp->next;
   }
-
-  ttemp=new node;
-  ttemp->prev=temp;
-  ttemp->next=NULL;
-   cin>>ttemp -> data;
-  temp->next=ttemp;
-
-
+  p=new node;
+  temp->next=p;
+  p->data=x;
+  p->prev=ttemp;
+  p->next=NULL;
 }
-void disp()
+int display()
 {
- temp=first; 
- while(temp!=NULL)
- { 
-   cout<<temp->data<<" ";
-   temp=temp->next;
- }
+  temp=first;
+  while(temp!=NULL){
+    cout<<temp->data<<" ";
+    temp=temp->next;
+  }
 }
 int main(){
-    create_first(10);
-    addnode();
+  create_first(10);
+  addnode(20);
+  addnode(30);
+  display();
 }
