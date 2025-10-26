@@ -70,7 +70,9 @@ int main(){
   create_first(10);
   addnode(20);
   addnode(30);
+  cout<<"Orignal linklist: "<<endl;
   display();
+  cout<<"reverse linklist: "<<endl;
   reverse();
   display();
 }
