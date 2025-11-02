@@ -26,6 +26,24 @@ int addnode(int x)
   p->prev=ttemp;
   p->next=NULL;
 }
+
+int add_before(int x)
+{
+  first=temp;
+  while(temp->data!=x){
+    temp=temp->next;
+  }
+  ttemp=temp->prev;
+  p=new node;
+  cout<<"Enter number ";
+  cin>>p->data;
+  p->prev=ttemp;
+  p->next=temp;
+//    ttemp->next=p;
+//    ttemp->prev=p;
+
+}
+
 int display()
 {
   temp=first;
@@ -38,5 +56,7 @@ int main(){
   create_first(10);
   addnode(20);
   addnode(30);
+  addnode(40);
+  add_before(30);
   display();
 }

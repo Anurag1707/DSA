@@ -40,3 +40,5 @@ int main(){
   addnode(30);
   display();
 }
+
+//MAIN CODE FOR DDL
