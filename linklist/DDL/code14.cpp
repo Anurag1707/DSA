@@ -26,24 +26,20 @@ int addnode(int x)
   p->prev=ttemp;
   p->next=NULL;
 }
-
-int add_before(int x)
+int delete_after(int x)
 {
-  temp=first;
-  while(temp->data!=x){
-    temp=temp->next;
-  }
-  ttemp=temp->prev;
-  p=new node;
-  cout<<"Enter number ";
-  cin>>p->data;
-  p->prev=ttemp;
-  p->next=temp;
-   ttemp->next=p;
-   ttemp->prev=p;
+    temp=first;
+    while(temp->data!=x){
+        temp=temp->next;
+    }
+    ttemp=temp->next;
+    p=ttemp->next;
+    temp->next=p;
+    p->prev=temp;
+    ttemp->next=ttemp->prev=NULL;
+    delete ttemp;
 
 }
-
 int display()
 {
   temp=first;
@@ -57,6 +53,6 @@ int main(){
   addnode(20);
   addnode(30);
   addnode(40);
-  add_before(30);
+  delete_after(20);
   display();
 }
