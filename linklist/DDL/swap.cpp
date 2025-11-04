@@ -26,19 +26,20 @@ int addnode(int x)
   p->prev=ttemp;
   p->next=NULL;
 }
-int delete_after(int x)
+
+int swap_SLL()
 {
     temp=first;
-    while(temp->data!=x){
-        temp=temp->next;
-    }
-    ttemp=temp->next;
-    p=ttemp->next;
-    temp->next=p;
-    p->prev=temp;
-    ttemp->next=ttemp->prev=NULL;
-    delete ttemp;
+    while (temp->next!=NULL)
+    temp=temp->next;
 
+    ttemp=temp->prev;
+    
+    p=ttemp->prev;
+    p->next=temp;
+    temp->prev=p;
+    temp->next=ttemp;
+    ttemp->next=NULL;
 }
 int display()
 {
@@ -53,7 +54,6 @@ int main(){
   addnode(20);
   addnode(30);
   addnode(40);
-  delete_after(20);
+  swap_SLL();
   display();
 }
-//delete after

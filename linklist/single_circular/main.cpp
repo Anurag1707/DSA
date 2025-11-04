@@ -32,13 +32,11 @@ void add_nodes(int x)
 }
 void display()
 {
-     temp = first->next;
-    cout << first->data << " ";  // print first node
-    while (temp != first)
-    {
-        cout << temp->data << " ";
-        temp = temp->next;
-    }
+   temp=first;
+   do{
+    cout<<temp->data<<" ";
+    temp=temp->next;
+   }while (temp!=first); 
 }
 int main()
 {
