@@ -56,6 +56,7 @@ int main()
     create_first(10);
     add_nodes(20);
     add_nodes(30);
+    add_nodes(39);
     swap();
     display();
 }
