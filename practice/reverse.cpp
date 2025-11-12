@@ -39,24 +39,28 @@ int addnode(int x) {
     return 0;
 }
 
-int reverse()
-{
-    temp = first;
-    node* last = NULL;
+// int reverse()
+// {
+//     temp = first;
+//     node* last = NULL;
 
-    // Step 1: Traverse and swap next/prev for each node
-    while (temp != NULL) {
-        last = temp;  // store last node
-        node* tempNext = temp->next;
-        temp->next = temp->prev;
-        temp->prev = tempNext;
-        temp = tempNext;
-    }
+//     // Step 1: Traverse and swap next/prev for each node
+//     while (temp != NULL) {
+//         last = temp;  // store last node
+//         node* tempNext = temp->next;
+//         temp->next = temp->prev;
+//         temp->prev = tempNext;
+//         temp = tempNext;
+//     }
 
-    // Step 2: After loop, 'last' is new first
-    first = last;
+//     // Step 2: After loop, 'last' is new first
+//     first = last;
+// }
+
+void reverse(){
+  temp=first;
+  ttemp-
 }
-
 int display()
 {
   temp=first;
