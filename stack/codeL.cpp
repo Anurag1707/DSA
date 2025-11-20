@@ -22,6 +22,8 @@ void push(int x)
 
 int pop()
 {
+
+    
     int x;
     if(top==NULL)
     return 0;
